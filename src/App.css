@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #2980B9;
+}
+
+.main_card{
+  background-color: #3498DB;
+  height: 95vh;
+  width: 50rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-box-shadow: 2px 5px 10px -1px rgba(0,0,0,0.36); 
+  box-shadow: 2px 5px 10px -1px rgba(0,0,0,0.36);
+}
+
+.zip_input{
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.712);
+  background: transparent;
+  color: white;
+  height: 2rem;
+  width: 13.5rem;
+  padding-left: 0.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: .95rem;
+  letter-spacing: .5px;
+  position: absolute;
+  top: 8rem;
+  left: 6rem;
+}
+
+.zip_input::placeholder{
+  color: white;
+  font-size: .95rem;
+  letter-spacing: .5px;
+}
+
+.country_input{
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.712);
+  background: transparent;
+  color: white;
+  height: 2.2rem;
+  width: 13.5rem;
+  padding-left: 0.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: .95rem;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 8rem;
+  left: 23rem;
+}
+
+.country_input::-ms-expand{
+  display: none;
+}
+
+.country_input option{
+  color: black;
+}
+
+.search_input{
+  text-transform: uppercase;
+  background-color: transparent;
+  font-family: 'Roboto', sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.712);
+  color: white;
+  padding: .3rem 1rem;
+  border-radius: 10px;
+  position: absolute;
+  top: 8.5rem;
+  left: 39rem;
+}
+
+.search_input:hover{
+  cursor: pointer;
+}
+
+.icon{
+  position: absolute;
+  top: 22rem;
+  left: 38%;
+  transform: translate(-50%, -50%);
+}
+
+.icon > img {
+  width: 13rem;
+}
+
+.temp{
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 5em;
+  position: absolute;
+  top: 22rem;
+  left: 63%;
+  transform: translate(-50%, -50%);
+}
+
+.weather_desc{
+  color: white;
+  text-transform: capitalize;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-size: 3rem;
+  width: 85%;
+  position: absolute;
+  top: 37rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.line{
+  width: 80%;
+  position: absolute;
+  top: 50rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fiveday_heading{
+  color: white;
+  text-transform: capitalize;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  position: absolute;
+  width: 80%;
+  top: 55rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fiveday_heading > h1 {
+  font-size: 3rem;
+}
+
+.fiveday_table_wrapper{
+  position: absolute;
+  top: 64rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+th{
+  padding-right: 3rem;
+  padding-left: 3rem;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+}
+
+td{
+  text-align: center;
+}
+
+.fiveday_icon{
+  width: 7rem;
+  margin-top: -.5rem;
+}

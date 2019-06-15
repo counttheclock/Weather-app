@@ -1,4 +1,4 @@
 module.exports = {
-  key: process.env.API_KEY,
-  username: process.env.API_USERNAME
+  key: process.env.REACT_APP_API_KEY,
+  username: process.env.REACT_APP_API_USERNAME
 }

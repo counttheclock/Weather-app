@@ -2,11 +2,14 @@
   "name": "weather-app",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "10.14.1",
+    "npm": "6.4.1"
+  },
   "dependencies": {
     "moment-timezone": "^0.5.25",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-reveal": "^1.2.2",
     "react-scripts": "3.0.1"
   },
   "scripts": {

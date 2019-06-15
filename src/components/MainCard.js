@@ -126,7 +126,7 @@ class MainCard extends Component {
     setTimeout(() => {
       console.log(this.state.lat);
       console.log(this.state.long);
-      fetch(`https://api.geonames.org/timezoneJSON?lat=${this.state.lat}&lng=${this.state.long}&username=${productionkeys.username}`)
+      fetch(`http://api.geonames.org/timezoneJSON?lat=${this.state.lat}&lng=${this.state.long}&username=${productionkeys.username}`)
         .then(res => res.json())
         .then(data =>
           this.setState({

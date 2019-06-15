@@ -7,6 +7,7 @@ import Error from './Error';
 import Loader from './Loader';
 import CallToAction from './CallToAction';
 import key from '../utils/key';
+import productionkeys from '../utils/productionkeys';
 import json from '../country_codes.json';
 import moment from 'moment-timezone'
 
@@ -77,7 +78,7 @@ class MainCard extends Component {
   getWeather = async (e) => {
     e.preventDefault();
 
-    fetch(`http://api.openweathermap.org/data/2.5/weather?zip=${this.state.zipCode},${this.state.selected}&APPID=${key.key}`)
+    fetch(`http://api.openweathermap.org/data/2.5/weather?zip=${this.state.zipCode},${this.state.selected}&APPID=${process.env.NODE_ENV === 'production' ? productionkeys.key : key.key}`)
       .then(res => res.json())
       .then(data =>
         this.setState({
@@ -96,7 +97,7 @@ class MainCard extends Component {
         this.setState({ error: true })
       )
 
-    fetch(`http://api.openweathermap.org/data/2.5/forecast?zip=${this.state.zipCode},${this.state.selected}&APPID=${key.key}`)
+    fetch(`http://api.openweathermap.org/data/2.5/forecast?zip=${this.state.zipCode},${this.state.selected}&APPID=${process.env.NODE_ENV === 'production' ? productionkeys.key : key.key}`)
       .then(res => res.json())
       .then(data =>
         this.setState({
@@ -125,7 +126,7 @@ class MainCard extends Component {
     setTimeout(() => {
       console.log(this.state.lat);
       console.log(this.state.long);
-      fetch(`http://api.geonames.org/timezoneJSON?lat=${this.state.lat}&lng=${this.state.long}&username=${key.username}`)
+      fetch(`http://api.geonames.org/timezoneJSON?lat=${this.state.lat}&lng=${this.state.long}&username=${process.env.NODE_ENV === 'production' ? productionkeys.username : key.username}`)
         .then(res => res.json())
         .then(data =>
           this.setState({

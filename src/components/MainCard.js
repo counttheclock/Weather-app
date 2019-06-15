@@ -77,7 +77,7 @@ class MainCard extends Component {
   getWeather = async (e) => {
     e.preventDefault();
 
-    fetch(`http://api.openweathermap.org/data/2.5/weather?zip=${this.state.zipCode},${this.state.selected}&APPID=${productionkeys.key}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${this.state.zipCode},${this.state.selected}&APPID=${productionkeys.key}`)
       .then(res => res.json())
       .then(data =>
         this.setState({
@@ -96,7 +96,7 @@ class MainCard extends Component {
         this.setState({ error: true })
       )
 
-    fetch(`http://api.openweathermap.org/data/2.5/forecast?zip=${this.state.zipCode},${this.state.selected}&APPID=${productionkeys.key}`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?zip=${this.state.zipCode},${this.state.selected}&APPID=${productionkeys.key}`)
       .then(res => res.json())
       .then(data =>
         this.setState({
@@ -125,7 +125,7 @@ class MainCard extends Component {
     setTimeout(() => {
       console.log(this.state.lat);
       console.log(this.state.long);
-      fetch(`http://api.geonames.org/timezoneJSON?lat=${this.state.lat}&lng=${this.state.long}&username=${productionkeys.username}`)
+      fetch(`https://api.geonames.org/timezoneJSON?lat=${this.state.lat}&lng=${this.state.long}&username=${productionkeys.username}`)
         .then(res => res.json())
         .then(data =>
           this.setState({

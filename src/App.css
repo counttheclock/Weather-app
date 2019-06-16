@@ -127,7 +127,7 @@ body {
   }
 
   to {
-    opacity: 1;
+  opacity: 1;
   }
 }
 
@@ -577,7 +577,7 @@ input[type="submit"] {
     top: 73%;
   }
   
-  @keyframes fadeInUp1 {
+  /* @keyframes fadeInUp1 {
     from {
       top: 80%;
       opacity: 0;
@@ -587,7 +587,7 @@ input[type="submit"] {
       top: 73%;
       opacity: 1;
     }
-  }
+  } */
 
   .fiveday_heading{
     top: 80%;
@@ -619,30 +619,19 @@ input[type="submit"] {
     width: 5rem;
     margin-top: -.5rem;
   }
+
+  @media only screen and (max-height: 750px) {  
+    .search_input{
+      top: 23%;
+    }
+    
+  }
   
 }
 
 @media only screen and (max-width: 450px) {
   .main_card{
     width: 100vw;
-  }
-  .zip_input{
-    height: 2rem;
-    width: 35%;
-    top: 6rem;
-    left: 10%;
-  }
-  
-  .country_input{
-    width: 35%;
-    top: 6rem;
-    left: 55%;
-  }
-
-  .search_input{
-    top: 10.5rem;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
   
   .icon{
@@ -663,18 +652,6 @@ input[type="submit"] {
   .weather_desc{
     font-size: 1.7rem;
     top: 55%;
-  }
-
-  @keyframes fadeInUp1 {
-    from {
-      top: 75%;
-      opacity: 0;
-    }
-  
-    to {
-      top: 67%;
-      opacity: 1;
-    }
   }
 
   .line{
@@ -706,6 +683,37 @@ input[type="submit"] {
   .fiveday_icon{
     width: 4rem;
     margin-top: -.5rem;
+  }
+
+  @media only screen and (max-height: 516px) {  
+    .search_input{
+      top: 25%;
+    }
+    
+    .icon > img {
+      width: 7rem;
+    }
+  
+    .temp{
+      font-size: 4rem;
+    }
+  
+    .fiveday_heading > h1 {
+      font-size: 1.5rem;
+    }
+    
+    .fiveday_table{
+      margin-top: 2rem;
+    }
+
+    th {
+      font-size: .8rem;
+    }
+
+    .fiveday_icon{
+      width: 3rem;
+    }
+    
   }
   
 }
@@ -778,7 +786,7 @@ input[type="submit"] {
     top: 55%;
   }
 
-  @keyframes fadeInUp1 {
+  /* @keyframes fadeInUp1 {
     from {
       top: 75%;
       opacity: 0;
@@ -788,7 +796,7 @@ input[type="submit"] {
       top: 67%;
       opacity: 1;
     }
-  }
+  } */
 
   .line{
     top: 67%;

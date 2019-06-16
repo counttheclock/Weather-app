@@ -54,7 +54,7 @@ export class FiveDay extends Component {
                 <th>Tues</th>
                 <th>Wed</th>
               </tr>
-              <tr>
+              <tr className="fiveday_table">
                 <td><img className="fiveday_icon" src={iconTest(this.props.firstMain, this.props.firstDesc)} alt="FirstWeather" /></td>
                 <td><img className="fiveday_icon" src={iconTest(this.props.secondMain, this.props.secondDesc)} alt="SecondWeather" /></td>
                 <td><img className="fiveday_icon" src={iconTest(this.props.thirdMain, this.props.thirdDesc)} alt="ThirdWeather" /></td>

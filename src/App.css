@@ -276,6 +276,7 @@ td{
 }
 
 input[type="submit"] {
+  content: '\f002';
   font-family: "Font Awesome 5 Free";
   font-size: 1.2rem;
   font-weight: 900;

@@ -12,6 +12,27 @@ export class FiveDay extends Component {
   render() {
     let fade = this.props.fade;
     let output = null;
+    const dayDest = (day) => {
+      switch (day) {
+        case 'Monday':
+          return 'Mon';
+        case 'Tuesday':
+          return "Tues";
+        case 'Wednesday':
+          return "Wed";
+        case 'Thursday':
+          return "Thurs"
+        case 'Friday':
+          return 'Fri';
+        case 'Saturday':
+          return "Sat";
+        case "Sunday":
+          return "Sun";
+        default:
+          return 'N/A'
+      }
+    }
+
     // Test for which icon to use
     const iconTest = (weather, description) => {
       switch (weather) {
@@ -48,11 +69,11 @@ export class FiveDay extends Component {
           <table className="fiveday_table">
             <tbody>
               <tr>
-                <th>Sat</th>
-                <th>Sun</th>
-                <th>Mon</th>
-                <th>Tues</th>
-                <th>Wed</th>
+                <th>{dayDest(this.props.firstDay)}</th>
+                <th>{dayDest(this.props.secondDay)}</th>
+                <th>{dayDest(this.props.thirdDay)}</th>
+                <th>{dayDest(this.props.forthDay)}</th>
+                <th>{dayDest(this.props.fifthDay)}</th>
               </tr>
               <tr className="fiveday_table">
                 <td><img className="fiveday_icon" src={iconTest(this.props.firstMain, this.props.firstDesc)} alt="FirstWeather" /></td>

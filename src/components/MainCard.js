@@ -32,18 +32,23 @@ class MainCard extends Component {
       firstMain: '',
       firstDesc: '',
       firstHigh: '',
+      firstDay: '',
       secondMain: '',
       secondDesc: '',
       secondHigh: '',
+      secondDay: '',
       thirdMain: '',
       thirdDesc: '',
       thirdHigh: '',
+      thirdDay: '',
       forthMain: '',
       forthDesc: '',
       forthHigh: '',
+      forthDay: '',
       fifthMain: '',
       fifthDesc: '',
       fifthHigh: '',
+      fifthDay: '',
       fade: false,
       error: false,
       loading: false,
@@ -104,20 +109,26 @@ class MainCard extends Component {
           firstMain: data.list[3].weather[0].main,
           firstHigh: data.list[3].main.temp_max,
           firstDesc: data.list[3].weather[0].description,
+          firstDay: (moment(data.list[3].dt * 1000).format('dddd')),
           secondMain: data.list[11].weather[0].main,
           secondDesc: data.list[11].weather[0].description,
           secondHigh: data.list[11].main.temp_max,
+          secondDay: (moment(data.list[11].dt * 1000).format('dddd')),
           thirdMain: data.list[19].weather[0].main,
           thirdDesc: data.list[19].weather[0].description,
           thirdHigh: data.list[19].main.temp_max,
+          thirdDay: (moment(data.list[19].dt * 1000).format('dddd')),
           forthMain: data.list[27].weather[0].main,
           forthDesc: data.list[27].weather[0].description,
           forthHigh: data.list[27].main.temp_max,
+          forthDay: (moment(data.list[27].dt * 1000).format('dddd')),
           fifthMain: data.list[35].weather[0].main,
           fifthDesc: data.list[35].weather[0].description,
           fifthHigh: data.list[35].main.temp_max,
+          fifthDay: (moment(data.list[35].dt * 1000).format('dddd')),
           error: false
         })
+        // console.log(data)
       )
       .catch(err =>
         this.setState({ error: true })
@@ -208,14 +219,19 @@ class MainCard extends Component {
           <FiveDay
             firstMain={this.state.firstMain}
             firstDesc={this.state.firstDesc}
+            firstDay={this.state.firstDay}
             secondMain={this.state.secondMain}
             secondDesc={this.state.secondDesc}
+            secondDay={this.state.secondDay}
             thirdMain={this.state.thirdMain}
             thirdDesc={this.state.thirdDesc}
+            thirdDay={this.state.thirdDay}
             forthMain={this.state.forthMain}
             forthDesc={this.state.forthDesc}
+            forthDay={this.state.forthDay}
             fifthMain={this.state.fifthMain}
             fifthDesc={this.state.fifthDesc}
+            fifthDay={this.state.fifthDay}
             degree={this.state.degree}
             fadeFalse={this.fadeFalse}
             fade={this.state.fade}

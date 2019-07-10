@@ -1,4 +1,4 @@
-# ReactJS Weather API
+# ReactJS Weather App
 A simple weather app created with ReactJS and OpenWeatherMap API
 
 Try it out [here](https://sleepy-woodland-10983.herokuapp.com/).
